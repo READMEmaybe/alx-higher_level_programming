@@ -12,18 +12,7 @@ if __name__ == '__main__':
     try:
         a = int(sys.argv[1])
         b = int(sys.argv[3])
-        op = sys.argv[2]
+        op = {"+": add, "-": sub, "*": mul, "/": div}
     except ValueError:
         sys.exit(1)
-    match op:
-        case "+":
-            result = add(a, b)
-        case "-":
-            result = sub(a, b)
-        case "*":
-            result = mul(a, b)
-        case "/":
-            result = div(a, b)
-        case _:
-            result = 0
-    print("{} {} {} = {}".format(a, op, b, result))
+    print("{} {} {} = {}".format(a, sys.argv[2], b, op[sys.argv[2]](a, b)))
