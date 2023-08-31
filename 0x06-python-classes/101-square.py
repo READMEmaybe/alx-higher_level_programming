@@ -10,7 +10,11 @@ class Square:
         self.position = position
 
     def area(self):
-        """Returns the area of the square"""
+        """computes the area of the square.
+
+        Returns:
+            int: the result of the calculation.
+        """
         return self.__size ** 2
 
     @property
