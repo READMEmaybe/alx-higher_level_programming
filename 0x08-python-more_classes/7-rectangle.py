@@ -91,7 +91,7 @@ class Rectangle:
             str: A string representation of the rectangle.
         """
         string = ""
-        if self.__height == 0 or self.__height == 0:
+        if self.__height == 0 or self.__width == 0:
             return string
         string += "\n".join(str(self.print_symbol) * self.__width
                             for _ in range(self.__height))
