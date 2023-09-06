@@ -1,0 +1,37 @@
+.. Module: 5-text_indentation.py
+
+Testing text_indentation function
+================================
+
+>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+Test case 1: Formatting a simple text with punctuation
+-------------------------------------------------------
+>>> text_indentation("Hello. This is a sample text. How are you? I'm fine.")
+Hello.
+<BLANKLINE>
+This is a sample text.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+I'm fine.
+<BLANKLINE>
+
+Test case 2: Formatting a text with leading spaces
+---------------------------------------------------
+>>> text_indentation("   This is an indented text. It should have leading spaces.")
+This is an indented text.
+<BLANKLINE>
+It should have leading spaces.
+<BLANKLINE>
+
+Test case 3: Formatting a text with no punctuation (should print as-is)
+-----------------------------------------------------------------------
+>>> text_indentation("This text has no punctuation")
+This text has no punctuation
+
+Test case 4: Passing a non-string input (should raise TypeError)
+----------------------------------------------------------------
+>>> text_indentation(123)
+Traceback (most recent call last):
+TypeError: text must be a string
