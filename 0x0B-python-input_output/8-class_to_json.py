@@ -12,6 +12,7 @@ def class_to_json(obj):
     Args:
         obj: The class instance to be converted.
     Returns:
-        dict: A dictionary containing the class instance's attributes and their values.
+        dict: A dictionary containing the class instance's attributes
+        and their values.
     """
     return obj.__dict__
