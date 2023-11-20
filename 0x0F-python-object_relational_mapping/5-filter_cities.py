@@ -10,7 +10,8 @@ if __name__ == '__main__':
     cur.execute("""SELECT cities.name
                 FROM cities
                 JOIN states ON cities.state_id = states.id
-                WHERE states.name = %s""", (sys.argv[4],))
+                WHERE states.name = %s
+                ORDER BY cities.id""", (sys.argv[4],))
     rows = cur.fetchall()
     print(", ".join([row[0] for row in rows]))
     cur.close()
